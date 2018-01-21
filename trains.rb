@@ -20,7 +20,7 @@ station_name = ""
   <SOAP-ENV:Body>
     <ns1:GetDepartureBoardRequest>
       <ns1:numRows>10</ns1:numRows>
-      <ns1:crs>WVF</ns1:crs>
+      <ns1:crs> &&STATION_CODE&& </ns1:crs>
     </ns1:GetDepartureBoardRequest>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
