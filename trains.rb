@@ -3,11 +3,11 @@ require 'net/http'
 require 'net/https'
 require 'json'
 require 'xmlsimple'
-
+@aurora_ip = ""
 @aurora_token = "REDACTED"
 @dest_station_name = ["Brighton"] #destination station
 @std = "21:26" #scheduled departure time
-@url = "http://192.168.1.144:16021/api/v1/#{@aurora_token}/state/"
+@url = "http://#{@aurora_ip}:16021/api/v1/#{@aurora_token}/state/"
 @train_body_xml = <<EOF
 <?xml version="1.0"?>
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://thalesgroup.com/RTTI/2014-02-20/ldb/" xmlns:ns2="http://thalesgroup.com/RTTI/2010-11-01/ldb/commontypes">
